@@ -1,0 +1,10 @@
+C:\maneekaandan\FSE\BackEnd\ProgMgrService\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+C:\maneekaandan\FSE\BackEnd\ProgMgrService\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\maneekaandan\FSE\BackEnd\ProgMgrService\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\maneekaandan\FSE\BackEnd\ProgMgrService\DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\maneekaandan\FSE\BackEnd\ProgMgrService\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\maneekaandan\FSE\BackEnd\ProgMgrService\DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\maneekaandan\FSE\BackEnd\ProgMgrService\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\maneekaandan\FSE\BackEnd\ProgMgrService\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\maneekaandan\FSE\BackEnd\ProgMgrService\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\maneekaandan\FSE\BackEnd\ProgMgrService\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache

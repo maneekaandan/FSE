@@ -1,0 +1,130 @@
+<form #userForm="ngForm" (ngSubmit)="saveProject(userForm)">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Project Page</h3>
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                <label for="projname">Project:</label>
+                <input id="projname" name="projname" [(ngModel)]="projname" 
+                type="text" class="form-control" #name="ngModel" placeholder="Enter project name">
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-3">
+                        <input type="checkbox"  (change)="onChange()" name="bSetDates" id="bSetDates" >
+                        <label for="bSetDates" class="checkboxPadding">set Start and End Date</label>
+                    </div>
+                    <div class="col-md-2">
+                        <input [disabled]="isDisabled" id="bSetDates" name="stDate" type="text" [minDate]="startDate"
+                        [maxDate]="maxDate"
+                            class="form-control" bsDatepicker  [(ngModel)]="startDate"
+                            >
+
+                    </div>
+                    <div class="col-md-2">
+                        <input  [disabled]="isDisabled" id="bSetDates" name="edDate" type="text" [minDate]="startDate" bsDatepicker
+                         [(ngModel)]="endDate" [maxDate]="maxDate"
+                            class="form-control" 
+                             >
+                    </div>
+                </div>
+            </div>
+
+            <div class="row form-group">
+                    <div class="col-md-2">
+                      <label for="priority">Priority:</label>
+                    </div>
+                    <div class="col-md-8">
+                      0<input type="range" min="0" max="30" step="1" class="rangeControl" 
+                      name='priority' [(ngModel)]="priority" value="10" id="priority" /> 
+                    </div>
+                    <div class="col-md-.5">
+                        30
+                    </div>
+                    <div>
+                        <span>Selected value: {{ priority}}</span>
+                    </div>
+                </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-2">
+                <label for="mgr">Manager: </label>
+            </div>
+            <div class="col-md-2">
+                <input id="mgrname" name="mgr" [(ngModel)]="mgrText" type="text">
+            </div>
+            <div class="col-md-2">
+                <button [disabled]="isbtnDisabled" type="button" class="btn btn-primary" (click)="loadMgrDetails()">Search</button>  
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="panel-footer">
+            <button type="submit" class="btn btn-primary buttonWidth pull-right">{{buttonText}}</button>
+            <button type="reset" class="btn btn-primary buttonWidth pull-right" (click)="onRest()">Reset</button>
+        </div>
+    </div>
+</form>
+
+<br>
+<br>
+
+<div class="col-md-9">
+    <table class="table table-hover table-condensed">
+        <div class="form-group">
+        <div class="row">
+            <div>
+                <input type="text" class="form-control" [(ngModel)]="searchFlag" placeholder="Search...">
+            </div>
+        </div>
+        </div>
+        <tr>
+            <td colspan="3"><label>Sort By : </label> </td>
+            <td colspan="1"><button class="btn btn-secondary" (click)="sortStartdate()">Start Date</button></td>
+            <td colspan="1"><button class="btn btn-secondary" (click)="sortEnddate()">End Date</button></td>
+            <td colspan="1"><button class="btn btn-secondary" (click)="sortPriority()">Priority</button></td>
+            <td colspan="1"><button class="btn btn-secondary" (click)="sortCompleted()">Completed</button></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <table class="table table-striped"> 
+        <thead>
+            <tr>
+                <th class="hidden">Id</th>
+                <th class="hidden">Start Date</th>
+                <th class="hidden">End Date</th>
+                <th class="hidden">Priority</th>
+                <th class="hidden">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr *ngFor="let proj of taskCountList | projfilter: searchFlag;  ">
+                    <div class="row">
+                            <td colspan="col-md-3">Projet: {{ proj.projectid}}</td>
+                            <td colspan="col-md-2">Priority: {{proj.priority}} </td>
+                            <div class="col-md-12">
+                                    <div class="row">
+                                            <div class="col-md-12">
+                                                <td class="col-md-2">No of Tasks: {{ proj.totalTask }}</td>
+                                                <td class="col-md-6">Completed: {{ proj.completed }}</td>
+                                                <td class="col-md-2"><button class="btn btn-danger" (click)="editProj(proj)"> Update</button></td>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <td class="col-md-2">Starte Date: {{ proj.startdate | date}}</td>
+                                                <td class="col-md-2">End Date: {{ proj.enddate | date}}</td>
+                                                <td class="col-md-2"><button class="btn btn-danger" (click)="suspendProj(proj)" style="margin-left: 20px;"> Suspend</button></td>
+                                            </div>
+                                    </div>
+                            </div>
+                            
+                            
+                    </div>
+                </tr>
+                <tr *ngIf="!projectList || projectList.length==0">
+                    <td colspan="4">Load...</td>
+                </tr>
+            </tbody>
+    </table>
+</div>

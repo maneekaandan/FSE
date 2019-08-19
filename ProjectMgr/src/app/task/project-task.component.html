@@ -1,0 +1,105 @@
+<form #taskForm="ngForm" (ngSubmit)="saveTaskTable(taskForm)">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Task Page</h3>
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                <div class="col-md-2">
+                    <label for="mgr">Project: </label>
+                </div>
+                <div class="col-md-2">
+                    <input disabled id="mgrname" name="mgrText" [(ngModel)]="mgrText" type="text">
+                </div>
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-primary" (click)="loadProgDetails()">Search</button>
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="taskname">Task:</label>
+                <input required id="taskname" name="taskname" [(ngModel)]="taskname" type="text" class="form-control"
+                    #name="ngModel" placeholder="Enter task name" #tasknamev="ngModel">
+                    
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-3">
+                        <input type="checkbox" [checked]='isDisabled' (change)="onChange()" name="bSetTasks" id="bSetTasks">
+                        <label for="bSetTasks" class="checkboxPadding">Parent Task</label>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row form-group">
+                <div class="col-md-2">
+                    <label for="priority">Priority:</label>
+                </div>
+                <div class="col-md-8">
+                    0<input type="range" min="0" max="30" step="1" class="rangeControl" name='priority'
+                        [(ngModel)]="priority" value="10" id="priority" />
+                </div>
+                <div class="col-md-.5">
+                    30
+                </div>
+                <div>
+                    <span>Selected value: {{ priority}}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-2">
+                <label for="parenttask">Parent Task: </label>
+            </div>
+            <div class="col-md-2">
+                <input disabled id="parenttask" [(ngModel)]="parenttaskText" name="parenttaskText" type="text">
+            </div>
+            <div class="col-md-2">
+                <button type="button" [disabled]="isDisabled" class="btn btn-primary" (click)="loadParentTaskDetails()">Search</button>
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <div class="form-group">
+            <div class="col-md-2">
+                <label for="tdate">Start Date: </label>
+            </div>
+            <div class="col-md-2">
+                <input [disabled]="isDisabled" id="stDate" name="stDate" type="text" [minDate]="startDate"
+                    [maxDate]="maxDate" class="form-control" bsDatepicker [(ngModel)]="startDate">
+            </div>
+            <div class="col-md-2">
+                <label for="tdate">End Date:</label>
+            </div>
+            <div class="col-md-2">
+                <input [disabled]="isDisabled" id="edDate" name="edDate" type="text" [minDate]="startDate" bsDatepicker
+                    [(ngModel)]="endDate" [maxDate]="maxDate" class="form-control"
+                    >
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="form-group">
+                <div class="col-md-2">
+                    <label for="unmame">User: </label>
+                </div>
+                <div class="col-md-2">
+                    <input disabled id="uname" [(ngModel)]="unameText" name="uname" type="text">
+                </div>
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-primary" (click)="loadUserDetails()">Search</button>
+                </div>
+            </div>
+            <br>
+            <br>
+
+        <div class="panel-footer">
+            <button type="submit" class="btn btn-primary buttonWidth pull-right">{{ editid === "1" ? "Update" :"Add"}}</button>
+            <button type="reset" class="btn btn-primary buttonWidth pull-right">Reset</button>
+        </div>
+    </div>
+</form>

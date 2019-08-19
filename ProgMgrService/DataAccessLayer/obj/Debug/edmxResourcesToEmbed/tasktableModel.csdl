@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="masterModel3" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="taskTable">
+    <Key>
+      <PropertyRef Name="taskid" />
+    </Key>
+    <Property Name="taskid" Type="Int32" Nullable="false" />
+    <Property Name="parentid" Type="Int32" />
+    <Property Name="projectid" Type="Int32" />
+    <Property Name="taskdesc" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="startdate" Type="DateTime" Precision="0" />
+    <Property Name="enddate" Type="DateTime" Precision="0" />
+    <Property Name="priority" Type="Int32" />
+    <Property Name="status" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="masterEntities5" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="taskTables" EntityType="Self.taskTable" />
+  </EntityContainer>
+</Schema>

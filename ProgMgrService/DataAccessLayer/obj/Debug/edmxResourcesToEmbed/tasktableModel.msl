@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="masterModel3StoreContainer" CdmEntityContainer="masterEntities5">
+    <EntitySetMapping Name="taskTables">
+      <EntityTypeMapping TypeName="masterModel3.taskTable">
+        <MappingFragment StoreEntitySet="taskTable">
+          <ScalarProperty Name="taskid" ColumnName="taskid" />
+          <ScalarProperty Name="parentid" ColumnName="parentid" />
+          <ScalarProperty Name="projectid" ColumnName="projectid" />
+          <ScalarProperty Name="taskdesc" ColumnName="taskdesc" />
+          <ScalarProperty Name="startdate" ColumnName="startdate" />
+          <ScalarProperty Name="enddate" ColumnName="enddate" />
+          <ScalarProperty Name="priority" ColumnName="priority" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

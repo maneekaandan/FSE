@@ -1,0 +1,47 @@
+
+<div class="col-md-9">
+    <table class="table table-hover table-condensed">
+        <tr>
+            <td><label> Project</label></td>
+            <td><input type="text" [(ngModel)]="searchProjText"></td>
+            <td colspan="2"><button class="btn btn-secondary" (click)="projSearch()">Search</button></td>
+            <td><label>Sort By : </label> </td>
+            <td colspan="2"><button class="btn btn-secondary" (click)="sortTypeStartDate()">Start Date</button></td>
+            <td colspan="2"><button class="btn btn-secondary" (click)="sortTypeEndDate()">End Date</button></td>
+            <td colspan="2"><button class="btn btn-secondary" (click)="sortTypePriority()">Priority</button></td>
+            <td colspan="2"><button class="btn btn-secondary" (click)="sortTypeStatusCompleted()">Completed</button></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="hidden">Id</th>
+                <th>Task</th>
+                <th>Project</th>
+                <th>Priority</th>
+                <th>Start</th>
+                <th>End</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let tt of taskTableList | filter : searchProjText ">
+                <td class="hidden">{{tt.taskid}}</td>
+                <td>{{tt.taskdesc}}</td>
+                <td>{{tt.projectid}}</td>
+                <td>{{tt.priority}}</td>
+                <td>{{tt.startdate | date}}</td>
+                <td>{{tt.enddate | date}}</td>
+                
+                <td><button [disabled]="tt.status == 'Completed'" class="btn btn-danger" (click)="editTask(tt)"> Edit</button>
+                    <button [disabled]="tt.status == 'Completed'" class="btn btn-danger" (click)="endTask(tt)" style="margin-left: 20px;">End Task</button>
+                </td>
+            </tr>
+            <tr *ngIf="!taskTableList || taskTableList.length==0">
+                <td colspan="4">Load...</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

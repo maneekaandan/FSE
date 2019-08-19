@@ -1,0 +1,78 @@
+<form #userForm="ngForm" (ngSubmit)="saveUser(userForm)">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">User Page</h3>
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                <label for="firstname">First Name</label>
+                <input required id="firstname" name="firstname" [(ngModel)]="firstname" 
+                    type="text" class="form-control" #firstnameControl="ngModel">
+            </div>
+            <div class="form-group">
+                <label for="lastname">Last Name</label>
+                <input required id="lastname" name="lastname" [(ngModel)]="lastname" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="empid">Employee ID</label>
+                <input required id="empid" name="empid" [(ngModel)]="empid" 
+                maxlength="8" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="panel-footer">
+            <button type="reset" class="btn btn-primary buttonWidth pull-right">Reset</button>
+            <button type="submit" class="btn btn-primary buttonWidth pull-right">{{buttonText}}</button>
+
+        </div>
+    </div>
+</form>
+
+<!-- {{userForm.value | json}} -->
+
+<br>
+<br>
+
+<div class="col-md-9">
+    <table class="table table-hover table-condensed">
+        <tr>
+            <td><label> Search by User's First Name </label></td>
+            <td><input type="text" [(ngModel)]="searchFlag"></td>
+            <td><label>Sort By : </label> </td>
+            <td colspan="2"><button class="btn btn-secondary" (click)="sortTypeFirstName()">First Name</button></td>
+            <td colspan="2"><button class="btn btn-secondary" (click)="sortTypeLastName()">Last Name</button></td>
+            <td colspan="2"><button class="btn btn-secondary" (click)="sortTypeEmpID()">Emp ID</button></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="hidden">Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Emp Id</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of usersList | userFilter: searchFlag">
+                <td class="hidden">{{user.userid}}</td>
+                <td>{{user.firstname}}</td>
+                <td>{{user.lastname}}</td>
+                <td>{{user.employeeid}}</td>
+                <!-- <span *ngIf="confirmDelete">
+                    <span>Are you sure you want to Delete?</span>
+                    <button class="btn btn-danger" (click)="deleteUser(user)">Yes</button>
+                    <button class="btn btn-primary" (click)="confirmDelete=false">No</button>
+                </span> -->
+                <td><button class="btn btn-danger" (click)="deleteUser(user)"> Delete</button>
+                    <button class="btn btn-danger" (click)="editUser(user)" style="margin-left: 20px;"> Edit</button>
+                </td>
+            </tr>
+            <tr *ngIf="!usersList || usersList.length==0">
+                <td colspan="4">Load...</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

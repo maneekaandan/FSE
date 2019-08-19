@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="masterModel1StoreContainer" CdmEntityContainer="masterEntities2">
+    <EntitySetMapping Name="projectTables">
+      <EntityTypeMapping TypeName="masterModel1.projectTable">
+        <MappingFragment StoreEntitySet="projectTable">
+          <ScalarProperty Name="projectid" ColumnName="projectid" />
+          <ScalarProperty Name="projectdesc" ColumnName="projectdesc" />
+          <ScalarProperty Name="startdate" ColumnName="startdate" />
+          <ScalarProperty Name="enddate" ColumnName="enddate" />
+          <ScalarProperty Name="priority" ColumnName="priority" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

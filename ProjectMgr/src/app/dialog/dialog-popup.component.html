@@ -1,0 +1,19 @@
+<h2 mat-dialog-title>Select a person from the list for mapping to the project</h2>
+<hr>
+
+<div class="form-group">
+    <label for="uname" class="checkbox-inline">
+        Employee Name List
+    </label>
+    <select id="uname" name="uname" [(ngModel)]="selectedId" class="form-control">
+        <option *ngFor="let sl of selectList" [value]="sl.id">
+            {{sl.title}}
+        </option>
+    </select>
+</div>
+
+<mat-dialog-actions>
+        <button class="mat-raised-button"(click)="close()">Close</button>
+        <button class="mat-raised-button mat-primary"(click)="save()">Assign</button>
+</mat-dialog-actions>
+    

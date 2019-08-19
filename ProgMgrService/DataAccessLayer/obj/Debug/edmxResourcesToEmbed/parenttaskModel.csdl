@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="masterModel2" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="parentTask">
+    <Key>
+      <PropertyRef Name="parentid" />
+    </Key>
+    <Property Name="parentid" Type="Int32" Nullable="false" />
+    <Property Name="parenttaskdesc" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="masterEntities4" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="parentTasks" EntityType="Self.parentTask" />
+  </EntityContainer>
+</Schema>
