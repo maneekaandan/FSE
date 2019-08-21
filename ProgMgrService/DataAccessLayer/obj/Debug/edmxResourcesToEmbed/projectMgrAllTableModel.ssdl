@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProjectMgrModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="parentTask">
+    <Key>
+      <PropertyRef Name="parentid" />
+    </Key>
+    <Property Name="parentid" Type="int" Nullable="false" />
+    <Property Name="parenttaskdesc" Type="varchar" MaxLength="60" />
+  </EntityType>
+  <EntityType Name="projectTable">
+    <Key>
+      <PropertyRef Name="projectid" />
+    </Key>
+    <Property Name="projectid" Type="int" Nullable="false" />
+    <Property Name="projectdesc" Type="varchar" MaxLength="60" />
+    <Property Name="startdate" Type="date" />
+    <Property Name="enddate" Type="date" />
+    <Property Name="priority" Type="int" />
+  </EntityType>
+  <EntityType Name="taskTable">
+    <Key>
+      <PropertyRef Name="taskid" />
+    </Key>
+    <Property Name="taskid" Type="int" Nullable="false" />
+    <Property Name="parentid" Type="int" />
+    <Property Name="projectid" Type="int" />
+    <Property Name="taskdesc" Type="varchar" MaxLength="60" />
+    <Property Name="startdate" Type="date" />
+    <Property Name="enddate" Type="date" />
+    <Property Name="priority" Type="int" />
+    <Property Name="status" Type="varchar" MaxLength="60" />
+  </EntityType>
+  <EntityType Name="usersTable">
+    <Key>
+      <PropertyRef Name="userid" />
+    </Key>
+    <Property Name="userid" Type="int" Nullable="false" />
+    <Property Name="firstname" Type="varchar" MaxLength="60" />
+    <Property Name="lastname" Type="varchar" MaxLength="60" />
+    <Property Name="employeeid" Type="int" />
+    <Property Name="projectid" Type="int" />
+    <Property Name="taskid" Type="int" />
+  </EntityType>
+  <EntityContainer Name="ProjectMgrModelStoreContainer">
+    <EntitySet Name="parentTask" EntityType="Self.parentTask" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="projectTable" EntityType="Self.projectTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="taskTable" EntityType="Self.taskTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usersTable" EntityType="Self.usersTable" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

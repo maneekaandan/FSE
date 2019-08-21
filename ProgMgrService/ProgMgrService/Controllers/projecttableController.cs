@@ -13,7 +13,7 @@ namespace ProgMgrService.Controllers
         [HttpGet]
         public IEnumerable<projectTable> Get()
         {
-            using (DataAccessLayer.masterEntities2 entities = new DataAccessLayer.masterEntities2())
+            using (DataAccessLayer.ProjectMgrEntities entities = new DataAccessLayer.ProjectMgrEntities())
             {
                 return entities.projectTables.ToList();
             }
@@ -21,7 +21,7 @@ namespace ProgMgrService.Controllers
 
         public HttpResponseMessage Get(int id)
         {
-            using (DataAccessLayer.masterEntities2 entities = new DataAccessLayer.masterEntities2())
+            using (DataAccessLayer.ProjectMgrEntities entities = new DataAccessLayer.ProjectMgrEntities())
             {
 
                 var entity = entities.projectTables.FirstOrDefault(pt => pt.projectid == id);
@@ -41,7 +41,7 @@ namespace ProgMgrService.Controllers
         {
             try
             {
-                using (DataAccessLayer.masterEntities2 entities = new DataAccessLayer.masterEntities2())
+                using (DataAccessLayer.ProjectMgrEntities entities = new DataAccessLayer.ProjectMgrEntities())
                 {
 
                     if (pt.projectid > 0)
@@ -72,7 +72,7 @@ namespace ProgMgrService.Controllers
         {
             try
             {
-                using (DataAccessLayer.masterEntities2 entities = new DataAccessLayer.masterEntities2())
+                using (DataAccessLayer.ProjectMgrEntities entities = new DataAccessLayer.ProjectMgrEntities())
                 {
                     var entity = entities.projectTables.FirstOrDefault(u => u.projectid == id);
                     if (entity == null)
@@ -99,7 +99,7 @@ namespace ProgMgrService.Controllers
         {
             try
             {
-                using (DataAccessLayer.masterEntities2 entities = new DataAccessLayer.masterEntities2())
+                using (DataAccessLayer.ProjectMgrEntities entities = new DataAccessLayer.ProjectMgrEntities())
                 {
                     var entity = entities.projectTables.FirstOrDefault(proj => proj.projectid  == pt.projectid);
                     if (entity == null)
@@ -136,7 +136,7 @@ namespace ProgMgrService.Controllers
         [ActionName("Get4Testing")]
         public int Get4Testing(int ptidall)
         {
-            using (DataAccessLayer.masterEntities2 entities = new DataAccessLayer.masterEntities2())
+            using (DataAccessLayer.ProjectMgrEntities entities = new DataAccessLayer.ProjectMgrEntities())
             {
                 return entities.projectTables.ToList().Count;
             }
@@ -146,12 +146,12 @@ namespace ProgMgrService.Controllers
         public bool Post4Testing(int all)
         {
             projectTable pt = new projectTable();
-            pt.projectid = 10;
+            pt.projectid = 5;
             pt.projectdesc = "Testing";
             pt.priority = 12;
             try
             {
-                using (DataAccessLayer.masterEntities2 entities = new DataAccessLayer.masterEntities2())
+                using (DataAccessLayer.ProjectMgrEntities entities = new DataAccessLayer.ProjectMgrEntities())
                 {
 
                     if (pt.projectid > 0)
@@ -177,7 +177,7 @@ namespace ProgMgrService.Controllers
         {
             try
             {
-                using (DataAccessLayer.masterEntities2 entities = new DataAccessLayer.masterEntities2())
+                using (DataAccessLayer.ProjectMgrEntities entities = new DataAccessLayer.ProjectMgrEntities())
                 {
                     var entity = entities.projectTables.FirstOrDefault(u => u.projectid == delid);
                     if (entity == null)
@@ -203,12 +203,12 @@ namespace ProgMgrService.Controllers
         public bool Put4Testing(int all)
         {
             projectTable pt = new projectTable();
-            pt.projectid = 6;
+            pt.projectid = 5;
             pt.priority = 19;
             pt.startdate = new DateTime().Date;
             try
             {
-                using (DataAccessLayer.masterEntities2 entities = new DataAccessLayer.masterEntities2())
+                using (DataAccessLayer.ProjectMgrEntities entities = new DataAccessLayer.ProjectMgrEntities())
                 {
                     var entity = entities.projectTables.FirstOrDefault(proj => proj.projectid == pt.projectid);
                     if (entity == null)

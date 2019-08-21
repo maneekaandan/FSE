@@ -12,7 +12,7 @@ namespace ProgMgrService.Controllers
     {
         public IEnumerable<taskTable> Get()
         {
-            using (DataAccessLayer.masterEntities5 entities = new DataAccessLayer.masterEntities5())
+            using (DataAccessLayer.ProjectMgrEntities entities = new DataAccessLayer.ProjectMgrEntities())
             {
                 return entities.taskTables.ToList();
             }
@@ -20,7 +20,7 @@ namespace ProgMgrService.Controllers
 
         public HttpResponseMessage Get(int id)
         {
-            using (DataAccessLayer.masterEntities5 entities = new DataAccessLayer.masterEntities5())
+            using (DataAccessLayer.ProjectMgrEntities entities = new DataAccessLayer.ProjectMgrEntities())
             {
 
                 var entity = entities.taskTables.FirstOrDefault(ut => ut.taskid == id);
@@ -41,7 +41,7 @@ namespace ProgMgrService.Controllers
         {
             try
             {
-                using (DataAccessLayer.masterEntities5 entities = new DataAccessLayer.masterEntities5())
+                using (DataAccessLayer.ProjectMgrEntities entities = new DataAccessLayer.ProjectMgrEntities())
                 {
 
                     if (tt.taskid > 0)
@@ -72,7 +72,7 @@ namespace ProgMgrService.Controllers
         {
             try
             {
-                using (DataAccessLayer.masterEntities5 entities = new DataAccessLayer.masterEntities5())
+                using (DataAccessLayer.ProjectMgrEntities entities = new DataAccessLayer.ProjectMgrEntities())
                 {
                     var entity = entities.taskTables.FirstOrDefault(u => u.taskid == tt.taskid);
                     if (entity == null)
@@ -110,7 +110,7 @@ namespace ProgMgrService.Controllers
 
         public int Get4Testing(int all)
         {
-            using (DataAccessLayer.masterEntities5 entities = new DataAccessLayer.masterEntities5())
+            using (DataAccessLayer.ProjectMgrEntities entities = new DataAccessLayer.ProjectMgrEntities())
             {
                 return entities.taskTables.ToList().Count;
             }
@@ -120,10 +120,10 @@ namespace ProgMgrService.Controllers
         public bool Post4Testing(int all)
         {
             taskTable tt = new taskTable();
-            tt.projectid = 5;
+            tt.taskid = 5;
             try
             {
-                using (DataAccessLayer.masterEntities5 entities = new DataAccessLayer.masterEntities5())
+                using (DataAccessLayer.ProjectMgrEntities entities = new DataAccessLayer.ProjectMgrEntities())
                 {
 
                     if (tt.taskid > 0)
@@ -150,11 +150,12 @@ namespace ProgMgrService.Controllers
         public bool Put4Testing(int all)
         {
             taskTable tt = new taskTable();
+            tt.taskid = 5;
             tt.projectid = 5;
             tt.priority = 10;
             tt.status = "In Progress";
 
-                using (DataAccessLayer.masterEntities5 entities = new DataAccessLayer.masterEntities5())
+                using (DataAccessLayer.ProjectMgrEntities entities = new DataAccessLayer.ProjectMgrEntities())
                 {
                     var entity = entities.taskTables.FirstOrDefault(u => u.taskid == tt.taskid);
                     if (entity == null)
@@ -183,6 +184,32 @@ namespace ProgMgrService.Controllers
                 }
         }
 
+        public bool Delete4Testing(int deleteRow)
+        {
+          
+            try
+            {
+                using (DataAccessLayer.ProjectMgrEntities entities = new DataAccessLayer.ProjectMgrEntities())
+                {
+                    var entity = entities.taskTables.FirstOrDefault(u => u.taskid == deleteRow);
+                    if (entity == null)
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        entities.taskTables.Remove(entity);
+                        entities.SaveChanges();
+                        return true;
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
 
     }
 }

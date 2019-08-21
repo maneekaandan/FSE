@@ -52,154 +52,58 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="parentTask.cs">
-      <DependentUpon>parenttaskModel.tt</DependentUpon>
+      <DependentUpon>projectMgrAllTableModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="parenttaskModel.Context.cs">
+    <Compile Include="projectMgrAllTableModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>parenttaskModel.Context.tt</DependentUpon>
+      <DependentUpon>projectMgrAllTableModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="parenttaskModel.cs">
+    <Compile Include="projectMgrAllTableModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>parenttaskModel.tt</DependentUpon>
+      <DependentUpon>projectMgrAllTableModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="parenttaskModel.Designer.cs">
+    <Compile Include="projectMgrAllTableModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>parenttaskModel.edmx</DependentUpon>
+      <DependentUpon>projectMgrAllTableModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="projectTable.cs">
-      <DependentUpon>projecttableModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="projecttableModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>projecttableModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="projecttableModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>projecttableModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="projecttableModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>projecttableModel.edmx</DependentUpon>
+      <DependentUpon>projectMgrAllTableModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="taskTable.cs">
-      <DependentUpon>tasktableModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tasktableModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>tasktableModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tasktableModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>tasktableModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tasktableModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>tasktableModel.edmx</DependentUpon>
+      <DependentUpon>projectMgrAllTableModel.tt</DependentUpon>
     </Compile>
     <Compile Include="usersTable.cs">
-      <DependentUpon>usertableModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="usertableModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>usertableModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="usertableModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>usertableModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="usertableModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>usertableModel.edmx</DependentUpon>
+      <DependentUpon>projectMgrAllTableModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
     <None Include="packages.config" />
-    <EntityDeploy Include="usertableModel.edmx">
+    <EntityDeploy Include="projectMgrAllTableModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>usertableModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>projectMgrAllTableModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <EntityDeploy Include="projecttableModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>projecttableModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <EntityDeploy Include="parenttaskModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>parenttaskModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="parenttaskModel.edmx.diagram">
-      <DependentUpon>parenttaskModel.edmx</DependentUpon>
-    </None>
-    <None Include="projecttableModel.edmx.diagram">
-      <DependentUpon>projecttableModel.edmx</DependentUpon>
-    </None>
-    <EntityDeploy Include="tasktableModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>tasktableModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="tasktableModel.edmx.diagram">
-      <DependentUpon>tasktableModel.edmx</DependentUpon>
-    </None>
-    <None Include="usertableModel.edmx.diagram">
-      <DependentUpon>usertableModel.edmx</DependentUpon>
+    <None Include="projectMgrAllTableModel.edmx.diagram">
+      <DependentUpon>projectMgrAllTableModel.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="parenttaskModel.Context.tt">
+    <Content Include="projectMgrAllTableModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>parenttaskModel.edmx</DependentUpon>
-      <LastGenOutput>parenttaskModel.Context.cs</LastGenOutput>
+      <DependentUpon>projectMgrAllTableModel.edmx</DependentUpon>
+      <LastGenOutput>projectMgrAllTableModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="parenttaskModel.tt">
+    <Content Include="projectMgrAllTableModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>parenttaskModel.edmx</DependentUpon>
-      <LastGenOutput>parenttaskModel.cs</LastGenOutput>
-    </Content>
-    <Content Include="projecttableModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>projecttableModel.edmx</DependentUpon>
-      <LastGenOutput>projecttableModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="projecttableModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>projecttableModel.edmx</DependentUpon>
-      <LastGenOutput>projecttableModel.cs</LastGenOutput>
-    </Content>
-    <Content Include="tasktableModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>tasktableModel.edmx</DependentUpon>
-      <LastGenOutput>tasktableModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="tasktableModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>tasktableModel.edmx</DependentUpon>
-      <LastGenOutput>tasktableModel.cs</LastGenOutput>
-    </Content>
-    <Content Include="usertableModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>usertableModel.edmx</DependentUpon>
-      <LastGenOutput>usertableModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="usertableModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>usertableModel.edmx</DependentUpon>
-      <LastGenOutput>usertableModel.cs</LastGenOutput>
+      <DependentUpon>projectMgrAllTableModel.edmx</DependentUpon>
+      <LastGenOutput>projectMgrAllTableModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

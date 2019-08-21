@@ -12,7 +12,7 @@ namespace ProgMgrService.Controllers
     {
         public IEnumerable<parentTask> Get()
         {
-            using (DataAccessLayer.masterEntities4 entities = new DataAccessLayer.masterEntities4())
+            using (DataAccessLayer.ProjectMgrEntities entities = new DataAccessLayer.ProjectMgrEntities())
             {
                 return entities.parentTasks.ToList();
             }
@@ -20,7 +20,7 @@ namespace ProgMgrService.Controllers
 
         public HttpResponseMessage Get(int id)
         {
-            using (DataAccessLayer.masterEntities4 entities = new DataAccessLayer.masterEntities4())
+            using (DataAccessLayer.ProjectMgrEntities entities = new DataAccessLayer.ProjectMgrEntities())
             {
 
                 var entity = entities.parentTasks.FirstOrDefault(ut => ut.parentid == id);
@@ -40,7 +40,7 @@ namespace ProgMgrService.Controllers
 
         public int Get4Testing(int all)
         {
-            using (DataAccessLayer.masterEntities4 entities = new DataAccessLayer.masterEntities4())
+            using (DataAccessLayer.ProjectMgrEntities entities = new DataAccessLayer.ProjectMgrEntities())
             {
                 return entities.parentTasks.ToList().Count;
             }

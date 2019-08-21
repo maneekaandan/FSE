@@ -16,20 +16,12 @@ namespace ProgMgrService.UnitTest
         {
             tasktableController obj = new tasktableController();
             int actualCount = obj.Get4Testing(0);
-            int expectedCount = 6;
+            int expectedCount = 1;
            
             Assert.AreEqual(expectedCount, actualCount);
         }
 
-        [TestMethod]
-        public void Test_Get_Neg()
-        {
-            tasktableController obj = new tasktableController();
-            int actualCount = obj.Get4Testing(0);
-            int expectedCount = 7;
-            //Negative Test case
-            Assert.AreEqual(expectedCount, actualCount);
-        }
+        
 
         [TestMethod]
         public void Test_Post_Pos()
@@ -48,6 +40,16 @@ namespace ProgMgrService.UnitTest
             bool actualRes = obj.Put4Testing(0);
             bool expectedRes = true;
             Assert.AreEqual(expectedRes, actualRes);
+        }
+
+        [TestMethod]
+        public void Test_Delete_Pos()
+        {
+            int delRow = 5;
+            tasktableController obj = new tasktableController();
+            bool actualRet = obj.Delete4Testing(delRow);
+            bool expectedRet = true;
+            Assert.AreEqual(expectedRet, actualRet);
         }
 
     }

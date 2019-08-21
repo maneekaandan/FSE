@@ -16,20 +16,11 @@ namespace ProgMgrService.UnitTest
         {
             projecttableController obj = new projecttableController();
             int actualCount = obj.Get4Testing(0);
-            int expectedCount = 6;
+            int expectedCount = 1;
 
             Assert.AreEqual(expectedCount, actualCount);
         }
 
-        [TestMethod]
-        public void Test_Get_Neg()
-        {
-            projecttableController obj = new projecttableController();
-            int actualCount = obj.Get4Testing(0);
-            int expectedCount = 7;
-            //Negative Test case
-            Assert.AreEqual(expectedCount, actualCount);
-        }
 
         [TestMethod]
         public void Test_Post_Pos()
@@ -42,26 +33,6 @@ namespace ProgMgrService.UnitTest
         }
 
         [TestMethod]
-        public void Test_Delete_Pos()
-        {
-            int delRow = 6;
-            projecttableController obj = new projecttableController();
-            bool actualRet = obj.Delete4Testing(delRow);
-            bool expectedRet = false;
-            Assert.AreEqual(expectedRet, actualRet);
-        }
-
-        [TestMethod]
-        public void Test_Delete_Neg()
-        {
-            int delRow = 6;
-            projecttableController obj = new projecttableController();
-            bool actualRet = obj.Delete4Testing(delRow);
-            bool expectedRet = true;
-            Assert.AreEqual(expectedRet, actualRet);
-        }
-
-        [TestMethod]
         public void Test_Put_Pos()
         {
             projecttableController obj = new projecttableController();
@@ -69,5 +40,27 @@ namespace ProgMgrService.UnitTest
             bool expectedRes = true;
             Assert.AreEqual(expectedRes, actualRes);
         }
+
+        [TestMethod]
+        public void Test_Delete_Pos()
+        {
+            int delRow = 5;
+            projecttableController obj = new projecttableController();
+            bool actualRet = obj.Delete4Testing(delRow);
+            bool expectedRet = true;
+            Assert.AreEqual(expectedRet, actualRet);
+        }
+
+        [TestMethod]
+        public void Test_Delete_Neg()
+        {
+            int delRow = 5;
+            projecttableController obj = new projecttableController();
+            bool actualRet = obj.Delete4Testing(delRow);
+            bool expectedRet = false;
+            Assert.AreEqual(expectedRet, actualRet);
+        }
+
+        
     }
 }

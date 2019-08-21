@@ -21,36 +21,12 @@ namespace ProgMgrService.UnitTest
            
             //IEnumerable<UserTable> actual = (IEnumerable<UserTable>)obj.Get();
             int actualCount = actual1.ToList().Count;
-            int expectedCount = 5;
+            int expectedCount = 1;
             //Negative Test case
             Assert.AreEqual(expectedCount, actualCount);
         }
 
-        [TestMethod]
-        public void Test_Get_Neg()
-        {
-            usertableController obj = new usertableController();
-            var actual1 = obj.Get();
-
-            //IEnumerable<UserTable> actual = (IEnumerable<UserTable>)obj.Get();
-            int actualCount = actual1.ToList().Count;
-            int expectedCount = 6;
-            //Negative Test case
-            Assert.AreEqual(expectedCount, actualCount);
-        }
-
-        [TestMethod]
-        public void Test_Get_Params_Pos()
-        {
-            int inputVal = 1;
-            usertableController obj = new usertableController();
-            bool actual = obj.GetbyRow4Testing(inputVal);
-
-            bool expectedCount = true;
-            //Positive Test case
-            Assert.AreEqual(expectedCount, actual);
-        }
-
+        
         [TestMethod]
         public void Test_Get_Params_Neg()
         {
@@ -85,20 +61,20 @@ namespace ProgMgrService.UnitTest
         [TestMethod]
         public void Test_Delete_Pos()
         {
-            int delRow = 6;
+            int delRow = 5;
             usertableController obj = new usertableController();
             bool actualRet = obj.Delete4Testing(delRow);
-            bool expectedRet = false;
+            bool expectedRet = true;
             Assert.AreEqual(expectedRet, actualRet);
         }
 
         [TestMethod]
         public void Test_Delete_Neg()
         {
-            int delRow = 6;
+            int delRow = 5;
             usertableController obj = new usertableController();
             bool actualRet = obj.Delete4Testing(delRow);
-            bool expectedRet = true;
+            bool expectedRet = false;
             Assert.AreEqual(expectedRet, actualRet);
         }
 

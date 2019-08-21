@@ -13,7 +13,7 @@ namespace ProgMgrService.Controllers
     {
         public IEnumerable<usersTable> Get()
         {
-            using ( DataAccessLayer.masterEntities1 entities = new  DataAccessLayer.masterEntities1())
+            using ( DataAccessLayer.ProjectMgrEntities entities = new  DataAccessLayer.ProjectMgrEntities())
             {
                 return entities.usersTables.ToList();
             }
@@ -21,7 +21,7 @@ namespace ProgMgrService.Controllers
 
         public HttpResponseMessage Get(int id)
         {
-            using (DataAccessLayer.masterEntities1 entities = new DataAccessLayer.masterEntities1())
+            using (DataAccessLayer.ProjectMgrEntities entities = new DataAccessLayer.ProjectMgrEntities())
             {
 
                 var entity = entities.usersTables.FirstOrDefault(ut => ut.userid == id);
@@ -41,7 +41,7 @@ namespace ProgMgrService.Controllers
         {
             try
             {
-                using (DataAccessLayer.masterEntities1 entities = new DataAccessLayer.masterEntities1())
+                using (DataAccessLayer.ProjectMgrEntities entities = new DataAccessLayer.ProjectMgrEntities())
                 {
                    
                     if (ut.userid > 0)
@@ -72,7 +72,7 @@ namespace ProgMgrService.Controllers
         //{
         //    try
         //    {
-        //        using (DataAccessLayer.masterEntities1 entities = new DataAccessLayer.masterEntities1())
+        //        using (DataAccessLayer.ProjectMgrEntities entities = new DataAccessLayer.ProjectMgrEntities())
         //        {
         //            var entity = entities.usersTables.FirstOrDefault(u => u.userid == ut.userid);
         //            if (entity == null)
@@ -98,7 +98,7 @@ namespace ProgMgrService.Controllers
         {
             try
             {
-                using (DataAccessLayer.masterEntities1 entities = new DataAccessLayer.masterEntities1())
+                using (DataAccessLayer.ProjectMgrEntities entities = new DataAccessLayer.ProjectMgrEntities())
                 {
                     var entity = entities.usersTables.FirstOrDefault(u => u.userid == ut.userid);
                     if (entity == null)
@@ -137,7 +137,7 @@ namespace ProgMgrService.Controllers
         {
             try
             {
-                using (DataAccessLayer.masterEntities1 entities = new DataAccessLayer.masterEntities1())
+                using (DataAccessLayer.ProjectMgrEntities entities = new DataAccessLayer.ProjectMgrEntities())
                 {
                     var entity = entities.usersTables.FirstOrDefault(u => u.userid == id);
                     if (entity == null)
@@ -168,7 +168,7 @@ namespace ProgMgrService.Controllers
             ut.userid = 5;
             try
             {
-                using (DataAccessLayer.masterEntities1 entities = new DataAccessLayer.masterEntities1())
+                using (DataAccessLayer.ProjectMgrEntities entities = new DataAccessLayer.ProjectMgrEntities())
                 {
 
                     if (ut.userid > 0)
@@ -202,7 +202,7 @@ namespace ProgMgrService.Controllers
             ut.employeeid = 0;
             try
             {
-                using (DataAccessLayer.masterEntities1 entities = new DataAccessLayer.masterEntities1())
+                using (DataAccessLayer.ProjectMgrEntities entities = new DataAccessLayer.ProjectMgrEntities())
                 {
                     var entity = entities.usersTables.FirstOrDefault(u => u.userid == ut.userid);
                     if (entity == null)
@@ -239,7 +239,7 @@ namespace ProgMgrService.Controllers
 
         public bool GetbyRow4Testing(int userid)
         {
-            using (DataAccessLayer.masterEntities1 entities = new DataAccessLayer.masterEntities1())
+            using (DataAccessLayer.ProjectMgrEntities entities = new DataAccessLayer.ProjectMgrEntities())
             {
 
                 var entity = entities.usersTables.FirstOrDefault(ut => ut.userid == userid);
@@ -260,7 +260,7 @@ namespace ProgMgrService.Controllers
             
             try
             {
-                using (DataAccessLayer.masterEntities1 entities = new DataAccessLayer.masterEntities1())
+                using (DataAccessLayer.ProjectMgrEntities entities = new DataAccessLayer.ProjectMgrEntities())
                 {
                     var entity = entities.usersTables.FirstOrDefault(u => u.userid == deleteRow);
                     if (entity == null)

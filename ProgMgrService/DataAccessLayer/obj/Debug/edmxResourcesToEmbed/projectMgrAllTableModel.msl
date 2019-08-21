@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ProjectMgrModelStoreContainer" CdmEntityContainer="ProjectMgrEntities">
+    <EntitySetMapping Name="parentTasks">
+      <EntityTypeMapping TypeName="ProjectMgrModel.parentTask">
+        <MappingFragment StoreEntitySet="parentTask">
+          <ScalarProperty Name="parentid" ColumnName="parentid" />
+          <ScalarProperty Name="parenttaskdesc" ColumnName="parenttaskdesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="projectTables">
+      <EntityTypeMapping TypeName="ProjectMgrModel.projectTable">
+        <MappingFragment StoreEntitySet="projectTable">
+          <ScalarProperty Name="projectid" ColumnName="projectid" />
+          <ScalarProperty Name="projectdesc" ColumnName="projectdesc" />
+          <ScalarProperty Name="startdate" ColumnName="startdate" />
+          <ScalarProperty Name="enddate" ColumnName="enddate" />
+          <ScalarProperty Name="priority" ColumnName="priority" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="taskTables">
+      <EntityTypeMapping TypeName="ProjectMgrModel.taskTable">
+        <MappingFragment StoreEntitySet="taskTable">
+          <ScalarProperty Name="taskid" ColumnName="taskid" />
+          <ScalarProperty Name="parentid" ColumnName="parentid" />
+          <ScalarProperty Name="projectid" ColumnName="projectid" />
+          <ScalarProperty Name="taskdesc" ColumnName="taskdesc" />
+          <ScalarProperty Name="startdate" ColumnName="startdate" />
+          <ScalarProperty Name="enddate" ColumnName="enddate" />
+          <ScalarProperty Name="priority" ColumnName="priority" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usersTables">
+      <EntityTypeMapping TypeName="ProjectMgrModel.usersTable">
+        <MappingFragment StoreEntitySet="usersTable">
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="employeeid" ColumnName="employeeid" />
+          <ScalarProperty Name="projectid" ColumnName="projectid" />
+          <ScalarProperty Name="taskid" ColumnName="taskid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
