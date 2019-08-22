@@ -16,6 +16,7 @@ C:\Project\Code\FSE\ProgMgrService\ProgMgrService\bin\ProgMgrService.pdb
 C:\Project\Code\FSE\ProgMgrService\ProgMgrService\bin\DataAccessLayer.dll
 C:\Project\Code\FSE\ProgMgrService\ProgMgrService\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Project\Code\FSE\ProgMgrService\ProgMgrService\bin\Microsoft.Web.Infrastructure.dll
+C:\Project\Code\FSE\ProgMgrService\ProgMgrService\bin\NBench.dll
 C:\Project\Code\FSE\ProgMgrService\ProgMgrService\bin\Newtonsoft.Json.dll
 C:\Project\Code\FSE\ProgMgrService\ProgMgrService\bin\System.Net.Http.Formatting.dll
 C:\Project\Code\FSE\ProgMgrService\ProgMgrService\bin\System.Web.Cors.dll

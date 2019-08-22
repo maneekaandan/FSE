@@ -1,0 +1,14 @@
+C:\Project\Code\FSE\ProgMgrService\PerformanceTest\bin\Debug\PerformanceTest.dll.config
+C:\Project\Code\FSE\ProgMgrService\PerformanceTest\bin\Debug\PerformanceTest.dll
+C:\Project\Code\FSE\ProgMgrService\PerformanceTest\bin\Debug\PerformanceTest.pdb
+C:\Project\Code\FSE\ProgMgrService\PerformanceTest\bin\Debug\EntityFramework.dll
+C:\Project\Code\FSE\ProgMgrService\PerformanceTest\bin\Debug\EntityFramework.SqlServer.dll
+C:\Project\Code\FSE\ProgMgrService\PerformanceTest\bin\Debug\NBench.dll
+C:\Project\Code\FSE\ProgMgrService\PerformanceTest\bin\Debug\Newtonsoft.Json.dll
+C:\Project\Code\FSE\ProgMgrService\PerformanceTest\bin\Debug\System.Net.Http.Formatting.dll
+C:\Project\Code\FSE\ProgMgrService\PerformanceTest\bin\Debug\EntityFramework.xml
+C:\Project\Code\FSE\ProgMgrService\PerformanceTest\bin\Debug\EntityFramework.SqlServer.xml
+C:\Project\Code\FSE\ProgMgrService\PerformanceTest\bin\Debug\Newtonsoft.Json.xml
+C:\Project\Code\FSE\ProgMgrService\PerformanceTest\bin\Debug\System.Net.Http.Formatting.xml
+C:\Project\Code\FSE\ProgMgrService\PerformanceTest\obj\Debug\PerformanceTest.dll
+C:\Project\Code\FSE\ProgMgrService\PerformanceTest\obj\Debug\PerformanceTest.pdb

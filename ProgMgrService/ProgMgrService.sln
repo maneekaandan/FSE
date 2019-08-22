@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 14 for Web
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgMgrService", "ProgMgrService\ProgMgrService.csproj", "{78486C3E-2102-4960-BE48-2771805EA58B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{C17933F5-C076-483B-BA15-7274E3F22C99}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgMgrService.UnitTest", "ProgMgrService.UnitTest\ProgMgrService.UnitTest.csproj", "{E7D80FB4-75B2-416B-BC7E-F14F34D935F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerformanceTest", "PerformanceTest\PerformanceTest.csproj", "{802E70DB-06AE-4DAE-90F5-A33451C3ED9F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{E7D80FB4-75B2-416B-BC7E-F14F34D935F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7D80FB4-75B2-416B-BC7E-F14F34D935F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7D80FB4-75B2-416B-BC7E-F14F34D935F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{802E70DB-06AE-4DAE-90F5-A33451C3ED9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{802E70DB-06AE-4DAE-90F5-A33451C3ED9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{802E70DB-06AE-4DAE-90F5-A33451C3ED9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{802E70DB-06AE-4DAE-90F5-A33451C3ED9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
